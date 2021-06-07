@@ -1,0 +1,26 @@
+.formobiles {
+    padding: 3vh;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../pictures/bg/bg_var1.png);
+    background-size: cover;
+    background-position: 35%;
+    display: flex;
+    font-family: 'Pangolin', cursive;
+    font-size: 3.5vh;
+    align-items: stretch;
+    text-align: center;
+}
+  
+.formobiles__info {
+    box-sizing: border-box;
+    padding: 3vh;
+    width: 100%;
+    height: auto;
+    background: rgba(238, 237, 237, 0.7);
+    border-radius: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

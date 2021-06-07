@@ -7,13 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
-.test{
-  background-color: aqua;
-  width: 50vw;
-  height: 50vh;
-}
+//IMPORTS
+@import 'blocks/formobiles.scss';
+
