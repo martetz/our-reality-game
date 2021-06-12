@@ -18,8 +18,7 @@ picket2.src = pckt2;
 let counter = 0;
 let i = 0;
 
-
-export default function helloScreen(){
+export default function helloScreen(foo){
     const c = document.querySelector('.c');
     const ctx = c.getContext('2d');
     c.width = 1600;
@@ -34,7 +33,7 @@ export default function helloScreen(){
     let x2 = 140;
     let y2 = 300;
 
-    let textAnimation = requestAnimationFrame(helloScreen);
+    let textAnimation = requestAnimationFrame(helloScreen.bind(null, foo));
 
     ctx.clearRect(0, 0, c.height, c.width);
     ctx.drawImage(bg, -1400, -1900, 3000, 3000);
@@ -49,7 +48,7 @@ export default function helloScreen(){
 
     if(i >= 3){
         cancelAnimationFrame(textAnimation);
-        console.log('Включаем навигацию');
+        foo();
     }
 
     if(counter > 40){

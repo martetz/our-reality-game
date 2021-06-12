@@ -1,14 +1,18 @@
 import React from 'react';
-import helloScreen from './HelloScreen';
-import Nav from './Nav';
+import HelloScreen from './HelloScreen';
 
 class C extends React.Component{ 
     constructor(props){
         super(props);
-    }  
-    
+        this.helloScreenOverFoo = this.helloScreenOverFoo.bind(this);
+    }
+
+    helloScreenOverFoo(){
+       this.props.nav();
+    }
+
     componentDidMount(){ 
-        helloScreen();
+        HelloScreen(this.helloScreenOverFoo);
     }
 
     render(){

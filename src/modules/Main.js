@@ -11,10 +11,16 @@ export default class Main extends React.Component{
         this.state = {
             visibility: 'none',
         }
+        this.navStartHandler = this.navStartHandler.bind(this);
+    }
+
+    navStartHandler(){
+        this.setState({
+            visibility: 'block',
+        })
     }
 
     render(){
-
         let body = document.querySelector('body');
         body.style.backgroundColor = 'tomato';
         body.style.letterSpacing = '0.2em';
@@ -24,7 +30,7 @@ export default class Main extends React.Component{
         return (
             <div className='main'>
                 <Loader />
-                <C />
+                <C nav={this.navStartHandler}/>
                 <Nav visibility={this.state.visibility}/>
             </div>)
     }
