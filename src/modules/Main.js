@@ -9,14 +9,14 @@ export default class Main extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            visibility: 'none',
+            visibility: 0,
         }
         this.navStartHandler = this.navStartHandler.bind(this);
     }
 
     navStartHandler(){
         this.setState({
-            visibility: 'block',
+            visibility: 1,
         })
     }
 

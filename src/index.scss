@@ -10,15 +10,7 @@ body {
 //IMPORTS
 @import 'blocks/Mobile.scss';
 @import 'blocks/Main.scss';
+@import 'blocks/Nav.scss';
 
 //Loader
 @import 'blocks/loader-rainbow.scss';
-
-.navigation{
-  z-index: 2;
-  position: absolute;
-  width: 60vw;
-  height: 40vw;
-  background-color: aqua;
-  border-radius: 5px;
-}

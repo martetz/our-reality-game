@@ -1,6 +1,7 @@
 import React from 'react';
 import HelloScreen from './HelloScreen';
 
+
 class C extends React.Component{ 
     constructor(props){
         super(props);
@@ -9,6 +10,7 @@ class C extends React.Component{
 
     helloScreenOverFoo(){
        this.props.nav();
+       //Должна зарабоатать основная функция игры
     }
 
     componentDidMount(){ 
