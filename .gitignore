@@ -1,7 +1,6 @@
 # dependencies
 /node_modules
 /package-lock.json
-/src/modules/Play.js
 
 
 # production

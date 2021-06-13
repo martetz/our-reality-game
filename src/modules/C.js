@@ -10,7 +10,6 @@ class C extends React.Component{
 
     helloScreenOverFoo(){
        this.props.nav();
-       //Должна зарабоатать основная функция игры
     }
 
     componentDidMount(){ 

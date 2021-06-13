@@ -1,5 +1,7 @@
 import React from 'react';
 import Btn from './Btn';
+import Game from './Game';
+
 
 class Nav extends React.Component{
     constructor(props){
@@ -14,6 +16,7 @@ class Nav extends React.Component{
         this.setState({
             display: 'none',
         })
+        Game();
     }
 
     render(){

@@ -30,7 +30,7 @@ export default class Main extends React.Component{
         return (
             <div className='main'>
                 <Loader />
-                <C nav={this.navStartHandler}/>
+                <C nav={this.navStartHandler} />
                 <Nav visibility={this.state.visibility}/>
             </div>)
     }
