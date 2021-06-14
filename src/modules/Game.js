@@ -11,7 +11,6 @@ import a_cop2 from '../pictures/person/cop/newangry2.svg';
 import draw from './game_foo/draw';
 import up from './game_foo/up';
 
-
 export default function Game(){
   
     let cop1 = new Image();
@@ -79,7 +78,16 @@ export default function Game(){
         y: game.flowers.y
     }
 
-    draw({c, ctx, game});
+    let promise = new Promise ((resolve, reject) => {
+        player3.onload = resolve;
+        player3.onerror = reject;
+    });
+
+    promise.then(() => {
+            draw({c, ctx, game});
+        })
+        .catch(e => {console.log(e)})
+
 
     window.addEventListener('keydown', (e)=>{
         if(!isFallen){

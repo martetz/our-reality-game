@@ -17,13 +17,14 @@ let mainCounter = 0;
 
 export default function draw({c, ctx, game}){
     let animation = requestAnimationFrame(draw.bind(null, {c, ctx, mainCounter, game}));
+
     ctx.clearRect(0, 0, c.width, c.height);
     ctx.drawImage(bg, 0, -150);  
     ctx.drawImage(ground, 0, c.height - ground.height);
-   
+
     mainCounter++;
-        run(move(c, ctx, game, mainCounter), c, ctx, game);
-        swat(true, ctx, game);
+    run(move(c, ctx, game, mainCounter), c, ctx, game);
+    swat(true, ctx, game);
     
     if(game.player.x - game.player.width < game.cop.x){ 
         cancelAnimationFrame(animation);

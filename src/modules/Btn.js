@@ -1,10 +1,6 @@
 import React from 'react';
 
 export default class Btn extends React.Component{
-    componentWillUnmount(){
-        console.log('Сейчас удалицца');
-    }
-
     componentDidMount(){
         window.addEventListener('keydown', (e)=>{
             if(e.key === 'Enter'){

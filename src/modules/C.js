@@ -1,7 +1,6 @@
 import React from 'react';
 import HelloScreen from './HelloScreen';
 
-
 class C extends React.Component{ 
     constructor(props){
         super(props);
