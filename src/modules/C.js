@@ -5,6 +5,7 @@ class C extends React.Component{
     constructor(props){
         super(props);
         this.helloScreenOverFoo = this.helloScreenOverFoo.bind(this);
+        // this.gameOverScreen = this.gameOverScreen.bind(this);
     }
 
     helloScreenOverFoo(){

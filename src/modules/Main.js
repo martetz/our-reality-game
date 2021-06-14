@@ -2,6 +2,7 @@ import React from 'react';
 import Loader from './Loader';
 import C from './C';
 import Nav from './Nav';
+import LastScreen from './LastScreen';
 
 
 
@@ -9,14 +10,22 @@ export default class Main extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            visibility: 0,
+            opacityNav: 0,
+            opacityLastScreen: 0,
         }
         this.navStartHandler = this.navStartHandler.bind(this);
+        this.lastScreenHandler = this.lastScreenHandler.bind(this);
     }
 
     navStartHandler(){
         this.setState({
-            visibility: 1,
+            opacityNav: 1,
+        })
+    }
+
+    lastScreenHandler(){
+        this.setState({
+            opacityLastScreen: 1,
         })
     }
 
@@ -31,7 +40,8 @@ export default class Main extends React.Component{
             <div className='main'>
                 <Loader />
                 <C nav={this.navStartHandler} />
-                <Nav visibility={this.state.visibility}/>
+                <Nav opacity={this.state.opacityNav} gameover={this.lastScreenHandler}/>
+                <LastScreen opacity={this.state.opacityLastScreen}/>
             </div>)
     }
 }

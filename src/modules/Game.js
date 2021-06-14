@@ -11,7 +11,9 @@ import a_cop2 from '../pictures/person/cop/newangry2.svg';
 import draw from './game_foo/draw';
 import up from './game_foo/up';
 
-export default function Game(){
+export default function Game(foo){
+
+    // console.log(foo);
   
     let cop1 = new Image();
     cop1.src = cop_1;
@@ -84,7 +86,7 @@ export default function Game(){
     });
 
     promise.then(() => {
-            draw({c, ctx, game});
+            draw({c, ctx, game, foo});
         })
         .catch(e => {console.log(e)})
 

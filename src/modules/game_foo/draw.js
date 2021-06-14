@@ -15,8 +15,8 @@ ground.src = grnd;
 let mainCounter = 0;
 
 
-export default function draw({c, ctx, game}){
-    let animation = requestAnimationFrame(draw.bind(null, {c, ctx, mainCounter, game}));
+export default function draw({c, ctx, game, foo}){
+    let animation = requestAnimationFrame(draw.bind(null, {c, ctx, mainCounter, game, foo}));
 
     ctx.clearRect(0, 0, c.width, c.height);
     ctx.drawImage(bg, 0, -150);  
@@ -28,7 +28,7 @@ export default function draw({c, ctx, game}){
     
     if(game.player.x - game.player.width < game.cop.x){ 
         cancelAnimationFrame(animation);
-        defeat({c, ctx, game});
+        defeat({c, ctx, game, foo});
 
     } else if(game.metro.x && game.metro.x <= 1250){
         cancelAnimationFrame(animation);

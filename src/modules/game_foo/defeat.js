@@ -19,8 +19,8 @@ let counter3 = 0;
 let lastCounter = 0;
 
 
-export default function defeat({c, ctx, game}){
-    let lastAnimation = requestAnimationFrame(defeat.bind(null, {c, ctx, game}));
+export default function defeat({c, ctx, game, foo}){
+    let lastAnimation = requestAnimationFrame(defeat.bind(null, {c, ctx, game, foo}));
     
     ctx.clearRect(0, 0, c.width, c.height);
     ctx.drawImage(bg, 0, -150);
@@ -57,7 +57,7 @@ export default function defeat({c, ctx, game}){
     lastCounter++;
     if(lastCounter > 100){
         cancelAnimationFrame(lastAnimation);
+        foo();
     }
     console.log('Последний экран - вы в автозаке');
-    // lastScreen(false);
 }

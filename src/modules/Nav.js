@@ -3,25 +3,35 @@ import Btn from './Btn';
 import Game from './Game';
 
 
-class Nav extends React.Component{
+export default class Nav extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            display: 'flex',
+            visibility: 'visible',
         }
         this.clickHandler = this.clickHandler.bind(this);
+        this.gameOverScreen = this.gameOverScreen.bind(this);
+
+    }
+
+ 
+
+    gameOverScreen(){
+        this.props.gameover();
     }
 
     clickHandler(){
         this.setState({
-            display: 'none',
+            visibility: 'hidden',
         })
-        Game();
+        Game(this.gameOverScreen);
     }
+
+
 
     render(){
         return (
-        <div className='navigation' style={{opacity: this.props.visibility, display: this.state.display}}>
+        <div className='navigation' style={{visibility: this.state.visibility, opacity: this.props.opacity}}>
         <div className="navigation__wrap">
             <div id="inst-1" className='instruction'>
                 <div className="instruction__but"></div>
@@ -47,6 +57,3 @@ class Nav extends React.Component{
     </div>)
     }
 }
-
-
-export default Nav;
