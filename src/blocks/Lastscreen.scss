@@ -1,0 +1,18 @@
+.lastscreen{
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    padding-top: 1vw;
+    border-radius: 5px;
+    transition: opacity 0.5s linear;
+    width: 60vw;
+    height: 40vw;
+    background-color: rgb(18, 94, 94);
+    background-image: url(../pictures/elements/avtozak_window.jpg);
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position-x: center;
+    background-position-y: center;
+    color: red;
+}
