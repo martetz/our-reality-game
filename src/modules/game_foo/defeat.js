@@ -59,5 +59,4 @@ export default function defeat({c, ctx, game, foo}){
         cancelAnimationFrame(lastAnimation);
         foo();
     }
-    console.log('Последний экран - вы в автозаке');
 }

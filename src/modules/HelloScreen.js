@@ -28,7 +28,6 @@ export default function helloScreen(foo){
         });
     
         promise.then((data) => {
-            console.log(data);
             const c = document.querySelector('.c');
             const ctx = c.getContext('2d');
             c.width = 1600;

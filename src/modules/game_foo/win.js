@@ -4,6 +4,7 @@ import metro_img from '../../pictures/elements/metro.svg';
 
 import run from './run';
 import swat from './swat';
+import reload from './reload';
 
 let ground = new Image();
 ground.src = grnd;
@@ -30,9 +31,6 @@ export default function win({c, ctx, game}){
     ctx.fillText('Забрало запотело', game.cop.x, game.cop.y - 50);
     if(game.player.x > c.width){
         cancelAnimationFrame(winAnimation);
-        setTimeout(()=>{
-            console.log('УРА!');
-            // location.reload();
-        }, 2000)
+        reload();
     }
 }
